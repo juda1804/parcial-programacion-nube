@@ -29,11 +29,14 @@ public class CriptomonedaController {
         return criptomonedaService.deleteCriptomoneda(id, divisa);
     }
 
+    //Primera criptomoneda con divisa mas alta
     @GetMapping("/criptomoneda/mayor-divisa")
     public Criptomoneda findCriptomonedaWithMaxDivisa(){
         return criptomonedaService.findMaxDivisa();
     }
 
+
+    //Encontrar la divisa mas usada
     @GetMapping("/max-used-divisa")
     public String findMaxUsedDivisa() {
         return criptomonedaService.findMaxUsedDivisa();
