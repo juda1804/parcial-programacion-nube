@@ -24,7 +24,6 @@ public class CriptomonedaService implements ICriptomonedaService {
     @Override
     public Boolean addCriptomoneda(Criptomoneda p) {
         List<Criptomoneda> filter = criptomonedaDAO.findCriptomonedaById(p.getIdMoneda());
-
         if (validate(filter,p)) {
             return criptomonedaDAO.addCriptomoneda(p);
         } else {
